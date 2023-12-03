@@ -65,8 +65,8 @@ const ResetGame = () => {
       <div v-for="(row, x) in board" :key="x" class="flex">
 
         <div v-for="(cell, y) in row" :key="y" @click="MakeMove(x, y)"
-          :class="`border border-white w-20 h-20 hover:bg-gray-700 flex items-center justify-center material-icons-outlined text-4xl cursor-pointer`">
-          {{ cell === 'X' ? 'X' : cell === 'O' ? 'O' : '' }}
+          :class="`border border-white w-20 h-20 hover:bg-gray-700 flex items-center justify-center material-icons-outlined text-4xl cursor-pointer ${cell === 'X' ? 'text-green-500' : 'text-red-500'}` ">
+          {{ cell === 'X' ? 'close' : cell === 'O' ? 'circle' : '' }}
         </div>
       </div>
     </div>
